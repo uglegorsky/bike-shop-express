@@ -1,0 +1,84 @@
+nav {
+  background-color: #ff4500;
+}
+
+.nav-wrapper {
+  padding: 0 2rem;
+}
+
+.btn {
+  background-color: #ff4500;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #d30000;
+}
+
+.card .card-action {
+  display: flex;
+  align-items: center;
+}
+
+.card-action__cart-form {
+  margin-left: auto;
+}
+
+.card .card-image img {
+  height: 15rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-content__cost {
+  font-size: 1.4rem;
+}
+
+.bike {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bike__name {
+  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4.2rem;
+}
+
+.bike__img {
+  max-width: 600px;
+  height: auto;
+}
+
+.bike__cost {
+  font-size: 2.5rem;
+}
+
+.cart__total-price {
+  padding: 1.5rem 0.3rem;
+}
+
+.edit-form {
+  margin-bottom: 1rem;
+}
+
+.auth__tabs {
+  margin-top: 2rem;
+}
+
+.alert {
+  padding: 0.5rem 0.1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: rgba(255, 0, 0, 0.3);
+  color: #ff4500;
+}
+
+.profile__avatar {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+}

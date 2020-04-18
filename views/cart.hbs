@@ -1,0 +1,40 @@
+<div class="cart" id="cart">
+  <h1>Your Shop Cart</h1>
+  {{#if bikes.length}}
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Price</th>
+          <th>Count</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {{#each bikes}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{price}}</td>
+            <td>{{count}}</td>
+            <td>
+              <button class="btn btn-small js-cart-remove" data-id={{id}} data-csrf="{{@root.csrf}}">Delete from
+                cart</button>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <div class="cart__total-price">
+      <span class="cart__total-price-text">Total price:</span>
+      <span><b class="js-price js-format">{{price}}</b></span>
+    </div>
+
+    <form action="/orders" method="POST">
+      <input type="hidden" name="_csrf" value="{{csrf}}">
+      <button type="submit" class="btn cart__order">Create order</button>
+    </form>
+  {{else}}
+    <p>Cart is empty.</p>
+  {{/if}}
+</div>

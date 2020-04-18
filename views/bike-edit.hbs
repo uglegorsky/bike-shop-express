@@ -1,0 +1,29 @@
+<h1>Edit {{bike.name}}</h1>
+
+<form action="/bikes/edit" method="POST" class="edit-form">
+  <div class="input-field">
+    <input id="name" name="name" type="text" value="{{bike.name}}" class="validate" required>
+    <label for="name">Bike model</label>
+    <span class="helper-text" data-error="Write model"></span>
+  </div>
+  <div class="input-field">
+    <input id="price" name="price" type="number" class="validate" required min="1" value="{{bike.price}}">
+    <label for="price">Model price</label>
+    <span class="helper-text" data-error="Write price"></span>
+  </div>
+  <div class="input-field">
+    <input id="img" type="text" name="img" class="validate" value="{{bike.img}}" required>
+    <label for="img">URL image</label>
+    <span class="helper-text" data-error="Add URL image"></span>
+  </div>
+
+  <input type="hidden" name="id" value="{{bike._id}}">
+  <input type="hidden" name="_csrf" value="{{csrf}}">
+  <button type="submit" class="btn btn-primary">Edit bike</button>
+</form>
+
+<form action="/bikes /remove" method="POST">
+  <input type="hidden" name="_csrf" value="{{csrf}}">
+  <input type="hidden" name="id" value="{{bike._id}}">
+  <button class="btn btn-primary">Delete from shop</button>
+</form>

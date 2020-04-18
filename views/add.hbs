@@ -1,0 +1,25 @@
+<h1>Add new bike</h1>
+
+{{#if error}}
+  <p class="alert">{{error}}</p>
+{{/if}}
+
+<form action="/add" method="POST">
+  <div class="input-field">
+    <input id="name" name="name" type="text" class="validate" value="{{data.name}}" required>
+    <label for="name">Bike model</label>
+    <span class="helper-text" data-error="Write model"></span>
+  </div>
+  <div class="input-field">
+    <input id="price" name="price" type="number" class="validate" value="{{data.price}}" required min="3">
+    <label for="price">Model cost</label>
+    <span class="helper-text" data-error="Write cost"></span>
+  </div>
+  <div class="input-field">
+    <input id="img" type="text" name="img" class="validate" value="{{data.img}}" required>
+    <label for="img">URL image</label>
+    <span class="helper-text" data-error="Add URL image"></span>
+  </div>
+  <input type="hidden" name="_csrf" value="{{csrf}}">
+  <button class="btn btn-primary">Add bike</button>
+</form>
